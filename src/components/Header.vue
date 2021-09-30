@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="container">
-            <img src="@/assets/img/dc-logo.png" alt="DC comics logo">
+            <img src="../assets/img/dc-logo.png" alt="DC comics logo">
             <ul>
                 <li v-for="(link, index) in links" :key="index" :class="{ active : link.active }">{{link.name}}</li>
             </ul>
@@ -82,8 +82,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import '@/assets/style/variables.scss';
-    @import '@/assets/style/common.scss';
+    @import '../assets/style/variables.scss';
+    @import '../assets/style/common.scss';
 
     header {
 

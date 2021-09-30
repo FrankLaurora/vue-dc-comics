@@ -3,7 +3,7 @@
         <div class="container">
             <ul>
                 <li v-for="(link, index) in links" :key="index">
-                    <img :src="'src/assets/img/' + link.url" :alt="link.name">
+                    <img :src="require('../assets/img/' + link.url)" :alt="link.name">
                     {{link.name}}
                 </li>
             </ul>
@@ -30,7 +30,7 @@ export default {
                 
                 {
                     name: 'subscription',
-                    url: 'buy-comics-subscription.png'
+                    url: 'buy-comics-subscriptions.png'
                 },
                 
                 {
@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss" scoped>
     @import '../assets/style/variables.scss';
-    @import '@/assets/style/common.scss';
+    @import '../assets/style/common.scss';
     section {
         background-color: $main-color;
         color: #fff;
@@ -63,11 +63,25 @@ export default {
         ul {
             display: flex;
             align-items: center;
+            justify-content: space-around;
+            width: 100%;
+            padding-block: 50px;
 
             li {
-                padding: 50px 42px;
+                display: flex;
+                align-items: center;
                 text-transform: uppercase;
                 font-size: small;
+
+                img {
+                    height: 55px;
+                    margin-right: 1rem;
+                }
+            }
+
+            li:last-child img {
+                height: auto;
+                width: 55px;
             }
         }
     }

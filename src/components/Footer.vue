@@ -56,7 +56,7 @@
                 <ul>
                     <h3>follow us</h3>
                     <li v-for="(link, index) in social" :key="index">
-                        <img :src="'../assets/img/footer-' + link.name + '.png'" :alt="link.name">
+                        <img :src="require('../assets/img/footer-' + link.name + '.png')" :alt="link.name">
                     </li>
                 </ul>
             </div>
@@ -97,8 +97,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    @import '@/assets/style/common.scss';
-    @import '@/assets/style/variables.scss';
+    @import '../assets/style/common.scss';
+    @import '../assets/style/variables.scss';
     
     .footer_top {
         background-image: url('../assets/img/footer-bg.jpg');
@@ -135,7 +135,7 @@ export default {
 
         .container {
             justify-content: space-between;
-            padding: 1.5rem;
+            padding-block: 1.5rem;
 
             button {
                 background-color: transparent;
@@ -153,14 +153,19 @@ export default {
 
             ul {
                 display: flex;
+                align-items: center;
 
                 h3 {
                     color: $main-color;
                     text-transform: uppercase;
                 }
 
-                li:not(:last-child) {
-                    padding: 0 0.5rem;
+                li {
+                    margin-inline: 0.5rem;
+                }
+
+                li:last-child {
+                    margin-right: 0;
                 }
             }
         }
