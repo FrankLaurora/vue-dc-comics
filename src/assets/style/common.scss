@@ -11,7 +11,7 @@ body {
 
 .container {
     display: flex;
-    width: calc((100% / 3) * 2);
+    width: calc((100vw / 3) * 2);
     margin: auto;
 }
 

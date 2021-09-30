@@ -4,7 +4,9 @@
             <img src="../assets/img/jumbotron.jpg" alt="Jumbotron">
         </div>
         <div class="card_container">
+            <h2 class="section_title">current series</h2>
             <Card v-for="(comic, index) in comics" :key="index" :card="comic"/>
+            <button>load more</button>
         </div>
     </main>
 </template>
@@ -117,10 +119,33 @@ export default {
         }
 
         .card_container {
+            position: relative;
             display: flex;
             flex-wrap: wrap;
             width: calc((100vw / 3) * 2);
             margin: auto;
+            justify-content: center;
+
+            h2 {
+                position: absolute;
+                top: 0;
+                left: 0;
+                transform: translate(0, -50%);
+                text-transform: uppercase;
+                color: #fff;
+                background-color: $main-color;
+                padding: 1rem 2rem;
+            }
+
+            button {
+                border: none;
+                background-color: $main-color;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: bold;
+                padding: 1rem 3rem;
+                margin: 3rem auto 1rem;
+            }
         }
     }
 
