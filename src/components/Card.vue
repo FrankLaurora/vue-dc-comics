@@ -31,6 +31,11 @@ export default {
             display: block;
             width: 100%;
         }
+
+        p {
+            text-transform: uppercase;
+            margin-top: 1rem;
+        }
     }
 
 </style>

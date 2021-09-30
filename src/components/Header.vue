@@ -90,11 +90,11 @@ export default {
         .container {
             justify-content: space-between;
             align-items: center;
-            height: 100%;
         }
 
         ul {
             display: flex;
+
             li {
                 list-style: none;
                 padding: 3.2rem 1rem;
