@@ -1,8 +1,6 @@
 <template>
     <main>
-        <div class="hero">
-            <img src="../assets/img/jumbotron.jpg" alt="Jumbotron">
-        </div>
+        <Hero :path="require('../assets/img/jumbotron.jpg')"/>
         <div class="card_container">
             <h2 class="section_title">current series</h2>
             <Card v-for="(comic, index) in comics" :key="index" :card="comic"/>
@@ -13,12 +11,14 @@
 
 <script>
 import Card from './Card.vue'
+import Hero from './Hero.vue'
 
 export default {
     name: 'Main',
 
     components: {
-        Card
+        Card,
+        Hero
     },
 
     data() {
@@ -109,14 +109,14 @@ export default {
         background-color: $secondary-color;
         color: #fff;
 
-        .hero {
-            height: 25rem;
-            overflow: hidden;
+        // .hero {
+        //     height: 25rem;
+        //     overflow: hidden;
 
-            img {
-                width: 100%;
-            }
-        }
+        //     img {
+        //         width: 100%;
+        //     }
+        // }
 
         .card_container {
             position: relative;
