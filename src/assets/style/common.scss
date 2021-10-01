@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+//google fonts
+// @import url(); qui devo inserire l'url che google fonts genera selezionando import anziché link
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
 body {
     font-family: 'PT Sans Narrow', sans-serif;
 }
